@@ -1,27 +1,14 @@
-$yellowdark: #FFFF00;
-$yellowlight: #FFFFE0;
-
-$graycolor: #555F61;
-$whitecolor: white;
-$greenlightcolor: #97EA48;
-$redlightcolor: #FF876D;
-
-$hoverbtncolor: #FFE0B5;
-
-$fontname: Galvji;
-
-
-.loginform{
+.loginform {
   display: flex;
-  flex-direction: column; //вертикаль
-  align-items: center; // горизонталь
+  flex-direction: column;
+  align-items: center;
   box-shadow: 0 0 30px 0;
   padding: 10px;
   border-radius: 8px;
-  background-color: $whitecolor;
+  background-color: white;
 }
 
-.loginbtnin{
+.loginbtnin {
   display: inline-block;
   margin-right: 0;
   margin-bottom: 15px;
@@ -29,12 +16,12 @@ $fontname: Galvji;
   border: 2px solid gray;
   text-align: center;
   border-right: 0 solid gray;
-  background: -webkit-linear-gradient(left, $yellowdark, $yellowlight);
-  color: $graycolor;
-  font-family: $fontname;
+  background: -webkit-linear-gradient(left, #FFFF00, #FFFFE0);
+  color: #555F61;
+  font-family: Galvji;
 }
 
-.signupbtnin{
+.signupbtnin {
   display: inline-block;
   margin: -5px;
   margin-bottom: 15px;
@@ -43,13 +30,12 @@ $fontname: Galvji;
   border: 2px solid gray;
   margin-right: 1px;
   border-left: 0 solid gray;
-  background: $whitecolor;
-  color: $graycolor;
-  font-family: $fontname;
+  background: white;
+  color: #555F61;
+  font-family: Galvji;
 }
 
-
-.signupbtnup{
+.signupbtnup {
   display: inline-block;
   margin-right: 0;
   margin-bottom: 15px;
@@ -57,13 +43,12 @@ $fontname: Galvji;
   border: 2px solid gray;
   text-align: center;
   border-right: 0 solid gray;
-  background: $whitecolor;
-  color: $graycolor;
-  font-family: $fontname;
-
+  background: white;
+  color: #555F61;
+  font-family: Galvji;
 }
 
-.loginbtnup{
+.loginbtnup {
   display: inline-block;
   margin: -5px;
   margin-bottom: 15px;
@@ -72,107 +57,109 @@ $fontname: Galvji;
   border: 2px solid gray;
   margin-right: 1px;
   border-left: 0 solid gray;
-  background: -webkit-linear-gradient(left, $yellowlight, $yellowdark);
-  color: $graycolor;
-  font-family: $fontname;
+  background: -webkit-linear-gradient(left, #FFFFE0, #FFFF00);
+  color: #555F61;
+  font-family: Galvji;
 }
 
-.maindiv{
+.maindiv {
   display: flex;
   flex-direction: column;
-  justify-content: center; // вертикаль
-  align-items: center; // горизонталь
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
-body{
+body {
   margin: 0;
-  background: -webkit-linear-gradient(left, $yellowdark, $yellowlight);
+  background: -webkit-linear-gradient(left, #FFFF00, #FFFFE0);
 }
 
-.field{
+.field {
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 15px;
   border: 2px solid gray;
   font-size: 15px;
   padding-right: 150px;
-  font-family: $fontname;
-  &::placeholder{color: $graycolor}
+  font-family: Galvji;
+}
+.field::placeholder {
+  color: #555F61;
 }
 
-.signinbtn{
+.signinbtn {
   border-radius: 20px;
   border: 2px solid gray;
   background-color: aquamarine;
   padding: 8px 100px;
-  font-family: $fontname;
-  background: -webkit-linear-gradient(left, $yellowdark, $yellowlight);
-  color: $graycolor;
+  font-family: Galvji;
+  background: -webkit-linear-gradient(left, #FFFF00, #FFFFE0);
+  color: #555F61;
   font-weight: bold;
   margin-top: 10px;
 }
 
-button:hover{
-  background: $hoverbtncolor;
+button:hover {
+  background: #FFE0B5;
 }
 
-.registerbtn{
+.registerbtn {
   border-radius: 20px;
   border: 2px solid gray;
   background-color: aquamarine;
   padding: 8px 100px;
-  font-family: $fontname;
-  background: -webkit-linear-gradient(left, $yellowdark, $yellowlight);
-  color: $graycolor;
+  font-family: Galvji;
+  background: -webkit-linear-gradient(left, #FFFF00, #FFFFE0);
+  color: #555F61;
   font-weight: bold;
   margin-top: 10px;
 }
 
-.savebtn{
+.savebtn {
   border-radius: 20px;
   border: 2px solid green;
   background-color: aquamarine;
   padding: 8px 50px;
-  font-family: $fontname;
-  background: $greenlightcolor;
-  color: $graycolor;
+  font-family: Galvji;
+  background: #97EA48;
+  color: #555F61;
   font-weight: bold;
   margin-top: 10px;
 }
 
-.cancelbtn{
+.cancelbtn {
   border-radius: 20px;
   border: 2px solid red;
   background-color: aquamarine;
   padding: 8px 50px;
-  font-family: $fontname;
-  background: $redlightcolor;
-  color: $graycolor;
+  font-family: Galvji;
+  background: #FF876D;
+  color: #555F61;
   font-weight: bold;
   margin-top: 10px;
 }
 
-.textitalics{
-  font-family: $fontname;
-  color: $graycolor;
+.textitalics {
+  font-family: Galvji;
+  color: #555F61;
   font-style: italic;
 }
 
-.textbold{
-  font-family: $fontname;
-  color: $graycolor;
+.textbold {
+  font-family: Galvji;
+  color: #555F61;
   font-weight: bold;
 }
 
-.profilephoto{
+.profilephoto {
   height: 200px;
   margin-bottom: 20px;
 }
 
-p{
+p {
   margin-left: 15px;
-  color: $graycolor;
+  color: #555F61;
 }
 
-
+/*# sourceMappingURL=login.css.map */
