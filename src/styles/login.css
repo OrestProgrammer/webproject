@@ -1,0 +1,165 @@
+.loginform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 30px 0;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.loginbtnin {
+  display: inline-block;
+  margin-right: 0;
+  margin-bottom: 15px;
+  padding: 10px 61px;
+  border: 2px solid gray;
+  text-align: center;
+  border-right: 0 solid gray;
+  background: -webkit-linear-gradient(left, #FFFF00, #FFFFE0);
+  color: #555F61;
+  font-family: Galvji;
+}
+
+.signupbtnin {
+  display: inline-block;
+  margin: -5px;
+  margin-bottom: 15px;
+  padding: 10px 60px;
+  padding-left: 66px;
+  border: 2px solid gray;
+  margin-right: 1px;
+  border-left: 0 solid gray;
+  background: white;
+  color: #555F61;
+  font-family: Galvji;
+}
+
+.signupbtnup {
+  display: inline-block;
+  margin-right: 0;
+  margin-bottom: 15px;
+  padding: 10px 61px;
+  border: 2px solid gray;
+  text-align: center;
+  border-right: 0 solid gray;
+  background: white;
+  color: #555F61;
+  font-family: Galvji;
+}
+
+.loginbtnup {
+  display: inline-block;
+  margin: -5px;
+  margin-bottom: 15px;
+  padding: 10px 60px;
+  padding-left: 66px;
+  border: 2px solid gray;
+  margin-right: 1px;
+  border-left: 0 solid gray;
+  background: -webkit-linear-gradient(left, #FFFFE0, #FFFF00);
+  color: #555F61;
+  font-family: Galvji;
+}
+
+.maindiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  background: -webkit-linear-gradient(left, #FFFF00, #FFFFE0);
+}
+
+.field {
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid gray;
+  font-size: 15px;
+  padding-right: 150px;
+  font-family: Galvji;
+}
+.field::placeholder {
+  color: #555F61;
+}
+
+.signinbtn {
+  border-radius: 20px;
+  border: 2px solid gray;
+  background-color: aquamarine;
+  padding: 8px 100px;
+  font-family: Galvji;
+  background: -webkit-linear-gradient(left, #FFFF00, #FFFFE0);
+  color: #555F61;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #FFE0B5;
+}
+
+.registerbtn {
+  border-radius: 20px;
+  border: 2px solid gray;
+  background-color: aquamarine;
+  padding: 8px 100px;
+  font-family: Galvji;
+  background: -webkit-linear-gradient(left, #FFFF00, #FFFFE0);
+  color: #555F61;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.savebtn {
+  border-radius: 20px;
+  border: 2px solid green;
+  background-color: aquamarine;
+  padding: 8px 50px;
+  font-family: Galvji;
+  background: #97EA48;
+  color: #555F61;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.cancelbtn {
+  border-radius: 20px;
+  border: 2px solid red;
+  background-color: aquamarine;
+  padding: 8px 50px;
+  font-family: Galvji;
+  background: #FF876D;
+  color: #555F61;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.textitalics {
+  font-family: Galvji;
+  color: #555F61;
+  font-style: italic;
+}
+
+.textbold {
+  font-family: Galvji;
+  color: #555F61;
+  font-weight: bold;
+}
+
+.profilephoto {
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-left: 15px;
+  color: #555F61;
+}
+
+/*# sourceMappingURL=login.css.map */
