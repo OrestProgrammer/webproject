@@ -44,8 +44,9 @@
   text-align: center;
   border-right: 0 solid gray;
   background: white;
-  color: #555F61;
   font-family: Galvji;
+  text-decoration: none;
+  color: #555F61;
 }
 
 .loginbtnup {
@@ -160,6 +161,24 @@ button:hover {
 p {
   margin-left: 15px;
   color: #555F61;
+}
+
+.error {
+  color: red;
+  font-family: "Times New Roman";
+  font-size: 20px;
+}
+
+.logoutbtn {
+  border-radius: 20px;
+  border: 2px solid gray;
+  background-color: aquamarine;
+  padding: 8px 100px;
+  font-family: Galvji;
+  background: -webkit-linear-gradient(left, #FFFF00, #FFFFE0);
+  color: #555F61;
+  font-weight: bold;
+  margin-top: 15px;
 }
 
 /*# sourceMappingURL=login.css.map */

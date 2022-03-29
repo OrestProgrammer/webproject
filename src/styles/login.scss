@@ -58,9 +58,9 @@ $fontname: Galvji;
   text-align: center;
   border-right: 0 solid gray;
   background: $whitecolor;
-  color: $graycolor;
   font-family: $fontname;
-
+  text-decoration: none;
+  color: $graycolor;
 }
 
 .loginbtnup{
@@ -174,5 +174,22 @@ p{
   margin-left: 15px;
   color: $graycolor;
 }
+
+.error{
+  color: red;
+}
+
+.logoutbtn{
+  border-radius: 20px;
+  border: 2px solid gray;
+  background-color: aquamarine;
+  padding: 8px 100px;
+  font-family: $fontname;
+  background: -webkit-linear-gradient(left, $yellowdark, $yellowlight);
+  color: $graycolor;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
 
 

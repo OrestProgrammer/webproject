@@ -12,31 +12,36 @@
             <h1 class="textbold">Sign Up</h1>
 
             <div>
-                <a href="login.html"> <button formaction="login.html" type = "submit" class="signupbtnup" value="login.html">Login</button> </a>
-                <button type = "submit" class="loginbtnup">Sign Up</button>
+                <a href="login.html"> <button type = "button" class="signupbtnup">Login</button></a>
+                <button type = "button" class="loginbtnup">Sign Up</button>
             </div>
             <div>
-                <input placeholder = "Name" type = "text" class="field">
+                <input placeholder = "Name" type = "text" class="field" name = "firstname" required minlength="3">
             </div>
             <div>
-                <input placeholder = "Surname" type = "text" class="field">
+                <input placeholder = "Surname" type = "text" class="field" name = "lastname" required minlength="3">
             </div>
             <div>
-                <input placeholder = "Login" type = "text" class="field">
+                <input placeholder = "Login" type = "text" class="field" name = "username" required minlength="3">
             </div>
             <div>
-                <input placeholder = "Password" type = "password" class="field">
+                <input placeholder = "Password" type = "password" class="field" name = "password" required minlength="6">
             </div>
             <div>
-                <input placeholder = "Email" type = "email" class="field">
+                <input placeholder = "Email" type = "email" class="field" name = "email" required minlength="3">
             </div>
-
+            <div>
+                <input placeholder = "Phone" type = "text" class="field" name = "phone" required minlength="3">
+            </div>
 
             <button type = "submit" class="registerbtn">Register</button>
 
             <p class="textitalics">Do you have an account? - <a href="login.html">Sign In</a></p>
 
         </form>
+        <p class="error"></p>
+
     </div>
+    <script src="../js/register.js"></script>
 </body>
 </html>

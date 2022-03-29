@@ -13,15 +13,15 @@
 
             <div>
                 <button type = "submit" class="loginbtnin">Login</button>
-                <button formaction="signup.html"  type = "submit" class="signupbtnin">Sign Up</button>
+                <a href="signup.html"><button type = "button" class="signupbtnin">Sign Up</button> </a>
             </div>
 
             <div>
-                <input placeholder = "Login" type = "text" class="field">
+                <input placeholder = "Login" type = "text" class="field" name = "username" required minlength="3">
             </div>
 
             <div>
-                <input placeholder = "Password" type = "password" class="field">
+                <input placeholder = "Password" type = "password" class="field" name = "password" required minlength="6">
             </div>
 
             <button type = "submit" class="signinbtn">Sign In</button>
@@ -29,6 +29,8 @@
             <p class="textitalics">Haven't got an account? - <a href="signup.html">Sign up</a></p>
 
         </form>
+        <p class="error"></p>
     </div>
+    <script src="../js/login.js"></script>
 </body>
 </html>
