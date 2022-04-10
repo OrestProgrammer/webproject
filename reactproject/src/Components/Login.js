@@ -18,15 +18,15 @@ const Login = () => {
         phone: ""
     });
 
-    const [error, setError] = useState(null); // стан компонента
+    const [error, setError] = useState(null);
 
     if(currentUser){
         return <Navigate to={'/userpage'}>  </Navigate>
     }
 
-    const handleChange = e => { // дозволить ввести текст в поля форми
+    const handleChange = e => {
         setError(null);
-        setFormData({...formData, [e.target.name]: e.target.value}); // заміняє нічого на значення, які я ввів в інпуті
+        setFormData({...formData, [e.target.name]: e.target.value});
     };
 
     const handleSubmit = async e => {

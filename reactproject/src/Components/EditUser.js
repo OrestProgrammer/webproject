@@ -6,7 +6,7 @@ import {useNavigate} from "react-router-dom";
 const EditUser = () => {
 
     const loginUser = JSON.parse(localStorage.getItem('loggeduser'));
-    const [error, setError] = useState(null); // стан компонента
+    const [error, setError] = useState(null);
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
@@ -36,7 +36,7 @@ const EditUser = () => {
         })
     }, []);
 
-    const handleChange = e => { // дозволить ввести текст в поля форми
+    const handleChange = e => {
         setError(null);
         setFormData({...formData, [e.target.name]: e.target.value}); // заміняє нічого на значення, які я ввів в інпуті
     };
