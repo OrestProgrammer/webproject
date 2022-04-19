@@ -10,6 +10,7 @@ const UserPage = () => {
     const navigate = useNavigate();
 
 
+
     useEffect(() => {
         const headers = new Headers();
 

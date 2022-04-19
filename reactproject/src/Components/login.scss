@@ -176,7 +176,11 @@ p{
 }
 
 .error{
+  margin-top: 10px;
+  font-family: $fontname;
+  font-size: 19px;
   color: red;
+  font-style: italic;
 }
 
 .logoutbtn{
@@ -191,3 +195,61 @@ p{
   margin-top: 15px;
 }
 
+.money{
+  color: $graycolor;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 20px;
+  font-family: $fontname;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.createbudget{
+  color: $graycolor;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 20px;
+  font-family: $fontname;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.create{
+  color: $graycolor;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 20px;
+  font-family: $fontname;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.history{
+  border-radius: 20px;
+  border: 2px solid gray;
+  background-color: aquamarine;
+  padding: 8px 100px;
+  font-family: $fontname;
+  background: -webkit-linear-gradient(left, $yellowdark, $yellowlight);
+  color: $graycolor;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.maindivhistory{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // вертикаль
+  align-items: center; // горизонталь
+}
+
+.pnone{
+  margin-top: 10px;
+  font-family: $fontname;
+  font-size: 20px;
+  color: $graycolor;
+  font-style: italic;
+}

@@ -163,7 +163,11 @@ p {
 }
 
 .error {
+  margin-top: 10px;
+  font-family: Galvji;
+  font-size: 19px;
   color: red;
+  font-style: italic;
 }
 
 .logoutbtn {
@@ -176,6 +180,65 @@ p {
   color: #555F61;
   font-weight: bold;
   margin-top: 15px;
+}
+
+.money {
+  color: #555F61;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 20px;
+  font-family: Galvji;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.createbudget {
+  color: #555F61;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 20px;
+  font-family: Galvji;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.create {
+  color: #555F61;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 20px;
+  font-family: Galvji;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.history {
+  border-radius: 20px;
+  border: 2px solid gray;
+  background-color: aquamarine;
+  padding: 8px 100px;
+  font-family: Galvji;
+  background: -webkit-linear-gradient(left, #FFFF00, #FFFFE0);
+  color: #555F61;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.maindivhistory {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pnone {
+  margin-top: 10px;
+  font-family: Galvji;
+  font-size: 20px;
+  color: #555F61;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=login.css.map */
