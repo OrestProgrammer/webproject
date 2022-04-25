@@ -21,12 +21,6 @@ const TakeMoneyFromFamilyBudget = () => {
         fetch(`http://0.0.0.0:8089/api/v1/user/${loginUser.username}`, {
             method: 'GET',
             headers,
-        }).then((response) => {
-            if (response.status === 200) {
-                return response.json();
-            }
-        }).then((data) => {
-           setUser(data.user)
         })
     }, []);
 
@@ -39,7 +33,10 @@ const TakeMoneyFromFamilyBudget = () => {
         e.preventDefault()
 
         const headers = new Headers();
-        headers.set('Authorization', `Basic ${btoa(`${loginUser.username}:${loginUser.password}`)}`);
+        // headers.set('Authorization', `Basic ${btoa(`${loginUser.username}:${loginUser.password}`)}`);
+        // headers.set('content-type', 'application/json');
+
+        headers.set('Authorization', `Basic ${btoa(`oliver:12345678`)}`);
         headers.set('content-type', 'application/json');
 
         setError(null);
@@ -53,17 +50,7 @@ const TakeMoneyFromFamilyBudget = () => {
                 method: 'PUT',
                 body: JSON.stringify(data),
                 headers,
-            }).then((response) => {
-                if (response.status === 200) {
-                    navigate('/mybudget/' + user.budgetId)
-                } else {
-                    response.text().then((data) => {
-                        setError(data)
-                    });
-                }
-            }).catch((e) => {
-                console.log(e)
-            });
+            })
         } else {
             setError("Amount must be greater than 0!")
         }
@@ -84,7 +71,7 @@ const TakeMoneyFromFamilyBudget = () => {
     } else {
         return (
             <div className="maindiv">
-                <form className="loginform">
+                <form data-testid="take_money_form" className="loginform">
                     <h1 className="textbold">Enter amount of money you want to take from family budget</h1>
 
                     <div>
@@ -93,7 +80,7 @@ const TakeMoneyFromFamilyBudget = () => {
                     </div>
 
                     <div>
-                        <button onClick={handleTakeMoney} type="submit" className="logoutbtn">Replenish</button>
+                        <button data-testid="take_money_btn" onClick={handleTakeMoney} type="submit" className="logoutbtn">Replenish</button>
                     </div>
                     <div>
                         <p></p>

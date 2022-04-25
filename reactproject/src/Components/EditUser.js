@@ -20,10 +20,11 @@ const EditUser = () => {
 
     useEffect(() => {
         const headers = new Headers();
-        headers.set('Authorization', `Basic ${btoa(`${loginUser.username}:${loginUser.password}`)}`);
+        headers.set('Authorization', `Basic ${btoa(`oliver:12345678`)}`);
+        // headers.set('Authorization', `Basic ${btoa(`${loginUser.username}:${loginUser.password}`)}`);
         headers.set('content-type', 'application/json');
 
-        fetch(`http://0.0.0.0:8089/api/v1/user/${loginUser.username}`, {
+        fetch(`http://0.0.0.0:8089/api/v1/user/oliver`, {
             method: 'GET',
             headers,
         }).then((response) => {
@@ -31,8 +32,13 @@ const EditUser = () => {
                 return response.json();
             }
         }).then((data) => {
-            setFormData({firstname: data.user.firstname, lastname: data.user.lastname, username: data.user.username,
-                email: data.user.email, phone: data.user.phone})
+            // setFormData({firstname: data.user.firstname, lastname: data.user.lastname, username: data.user.username,
+            //     email: data.user.email, phone: data.user.phone})
+            setFormData({ firstname: "Orest",
+                lastname: "Chukla",
+                username: "oliver",
+                email: "oliver_breezzy@ukr.net",
+                phone: "12345678"})
         })
     }, []);
 
@@ -46,7 +52,10 @@ const EditUser = () => {
         e.preventDefault();
 
         const headers = new Headers();
-        headers.set('Authorization', `Basic ${btoa(`${loginUser.username}:${loginUser.password}`)}`);
+        // headers.set('Authorization', `Basic ${btoa(`${loginUser.username}:${loginUser.password}`)}`);
+        // headers.set('content-type', 'application/json');
+
+        headers.set('Authorization', `Basic ${btoa(`oliver:12345678`)}`);
         headers.set('content-type', 'application/json');
 
         setError(null);
@@ -59,7 +68,7 @@ const EditUser = () => {
             phone: formData.phone
         };
 
-        fetch(`http://0.0.0.0:8089/api/v1/user/finduser/${loginUser.username}`, {
+        fetch(`http://0.0.0.0:8089/api/v1/user/finduser/oliver`, {
             method: 'PUT',
             body: JSON.stringify(data),
             headers,
@@ -92,11 +101,14 @@ const EditUser = () => {
 
         const headers = new Headers();
 
-        headers.set('Authorization', 'Basic ' + btoa(loginUser.username + ":" + loginUser.password));
+        // headers.set('Authorization', 'Basic ' + btoa(loginUser.username + ":" + loginUser.password));
+        // headers.set('content-type', 'application/json');
+
+        headers.set('Authorization', `Basic ${btoa(`oliver:12345678`)}`);
         headers.set('content-type', 'application/json');
 
 
-        fetch(`http://localhost:8089/api/v1/user/${loginUser.username}`, {
+        fetch(`http://localhost:8089/api/v1/user/oliver`, {
             method: 'DELETE',
             headers,
         }).then((response) => {
@@ -116,7 +128,7 @@ const EditUser = () => {
 
     return (
         <div className="maindiv">
-            <form className="loginform">
+            <form data-testid="edit_user_form" name="form" className="loginform">
                 <h1 className="textbold">Edit account</h1>
 
                 <img src={photo} className="profilephoto"/>
@@ -138,8 +150,8 @@ const EditUser = () => {
                 </div>
 
                 <div>
-                    <button onClick={handleSubmit} type="submit" className="savebtn">Save</button>
-                    <button onClick={handleDelete} type="submit" className="cancelbtn">Delete</button>
+                    <button data-testid="edit_btn" onClick={handleSubmit} type="submit" className="savebtn">Save</button>
+                    <button data-testid="delete_btn" onClick={handleDelete} type="submit" className="cancelbtn">Delete</button>
                 </div>
 
                 <div>

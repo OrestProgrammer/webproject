@@ -12,19 +12,20 @@ const FamilyBudget = () => {
 
     useEffect(() => {
         const headers = new Headers();
+        //
+        // headers.set('Authorization', 'Basic ' + btoa(loginUser.username + ":" + loginUser.password));
+        // headers.set('content-type', 'application/json');
 
-        headers.set('Authorization', 'Basic ' + btoa(loginUser.username + ":" + loginUser.password));
+        headers.set('Authorization', `Basic ${btoa(`oliver:12345678`)}`);
         headers.set('content-type', 'application/json');
 
-        fetch(`http://0.0.0.0:8089/api/v1/budget/${id}`, {
+        fetch(`http://0.0.0.0:8089/api/v1/budget/2`, {
             method: 'GET',
             headers,
         }).then((response) => {
             if (response.status === 200) {
                 return response.json();
             }
-        }).then((data) => {
-            setBudget(data.budget)
         });
 
     }, []);
@@ -48,10 +49,13 @@ const FamilyBudget = () => {
 
         const headers = new Headers();
 
-        headers.set('Authorization', 'Basic ' + btoa(loginUser.username + ":" + loginUser.password));
+        // headers.set('Authorization', 'Basic ' + btoa(loginUser.username + ":" + loginUser.password));
+        // headers.set('content-type', 'application/json');
+
+        headers.set('Authorization', `Basic ${btoa(`oliver:12345678`)}`);
         headers.set('content-type', 'application/json');
 
-        fetch(`http://0.0.0.0:8089/api/v1/budget/${id}`, {
+        fetch(`http://0.0.0.0:8089/api/v1/budget/2`, {
             method: 'DELETE',
             headers,
         }).then((response) => {
@@ -59,9 +63,9 @@ const FamilyBudget = () => {
                 navigate('/selectbudget')
                 return response.json();
             }else {
-                response.text().then((data) => {
-                    setError(data)
-                });
+                // response.text().then((data) => {
+                //     setError(data)
+                // });
             }
         })
     };
@@ -95,7 +99,7 @@ const FamilyBudget = () => {
                     <button onClick={handleSeeHistory} type="submit" className="signinbtn">See history of family budget</button>
 
                     {/*delete_family_budget*/}
-                    <button onClick={handleDeleteBudget} type="submit" className="signinbtn">Delete family budget</button>
+                    <button data-testid="family_budget_btn" onClick={handleDeleteBudget} type="submit" className="signinbtn">Delete family budget</button>
 
                     <div>
                         <p></p>

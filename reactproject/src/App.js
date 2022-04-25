@@ -25,7 +25,7 @@ function App() {
   return (
       <Router>
           <Navbar></Navbar>
-          <Routes>
+          <Routes data-testid="test">
               <Route exact path ='/' element={<Login />} />
               <Route exact path='/login' element={<Login />} />
               <Route exact path='/Register' element={<Register />} />
@@ -42,7 +42,7 @@ function App() {
               <Route exact path='/familybudgethistory/:id' element={<FamilyBudgetHistory />} />
           </Routes>
       </Router>
-  );
+);
 }
 
 export default App;

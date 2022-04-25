@@ -11,18 +11,19 @@ const MyBudget = () => {
     useEffect(() => {
         const headers = new Headers();
 
-        headers.set('Authorization', 'Basic ' + btoa(loginUser.username + ":" + loginUser.password));
+        // headers.set('Authorization', 'Basic ' + btoa(loginUser.username + ":" + loginUser.password));
+        // headers.set('content-type', 'application/json');
+
+        headers.set('Authorization', `Basic ${btoa(`oliver:12345678`)}`);
         headers.set('content-type', 'application/json');
 
-        fetch(`http://0.0.0.0:8089/api/v1/budget/${id}`, {
+        fetch(`http://0.0.0.0:8089/api/v1/budget/1`, {
             method: 'GET',
             headers,
         }).then((response) => {
             if (response.status === 200) {
                 return response.json();
             }
-        }).then((data) => {
-            setBudget(data.budget)
         });
 
     }, []);

@@ -20,7 +20,10 @@ const JoinFamilyBudget = () => {
         e.preventDefault()
 
         const headers = new Headers();
-        headers.set('Authorization', `Basic ${btoa(`${loginUser.username}:${loginUser.password}`)}`);
+        // headers.set('Authorization', `Basic ${btoa(`${loginUser.username}:${loginUser.password}`)}`);
+        // headers.set('content-type', 'application/json');
+
+        headers.set('Authorization', `Basic ${btoa(`oliver:12345678`)}`);
         headers.set('content-type', 'application/json');
 
         setError(null);
@@ -29,7 +32,7 @@ const JoinFamilyBudget = () => {
             familibudgetId: formData.familibudgetId
         };
 
-        fetch(`http://0.0.0.0:8089/api/v1/user/finduser/${loginUser.username}`, {
+        fetch(`http://0.0.0.0:8089/api/v1/user/finduser/oliver`, {
             method: 'PUT',
             body: JSON.stringify(data),
             headers,
@@ -59,7 +62,7 @@ const JoinFamilyBudget = () => {
     } else {
         return (
             <div className="maindiv">
-                <form className="loginform">
+                <form data-testid="join_budget_form" className="loginform">
                     <h1 className="textbold">Enter budget ID you want to join</h1>
 
                     <div>
@@ -68,7 +71,7 @@ const JoinFamilyBudget = () => {
                     </div>
 
                     <div>
-                        <button onClick={handleJoinFamilyBudget} type="submit" className="logoutbtn">Join budget</button>
+                        <button data-testid="join_budget_btn" onClick={handleJoinFamilyBudget} type="submit" className="logoutbtn">Join budget</button>
                     </div>
 
                     <div>

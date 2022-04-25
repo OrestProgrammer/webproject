@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 class Navbar extends Component {
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav data-testid="navbar_test" className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
                     <a className="navbar-brand">BudgetProject</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"

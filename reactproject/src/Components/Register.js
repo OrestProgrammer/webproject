@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import "./login.css"
 import {Link, useNavigate} from "react-router-dom";
+import axios from "axios";
 
 
 const Register = () => {
@@ -35,6 +36,7 @@ const Register = () => {
             email: formData.email,
             phone: formData.phone
         };
+
         fetch('http://0.0.0.0:8089/api/v1/user', {
             method: 'POST',
             body: JSON.stringify(data),
@@ -55,7 +57,7 @@ const Register = () => {
 
     return (
         <div className="maindiv">
-            <form onSubmit={handleSubmit} className="loginform">
+            <form data-testid="registerform" onSubmit={handleSubmit} className="loginform">
                 <h1 className="textbold">Sign Up</h1>
 
                 <div>

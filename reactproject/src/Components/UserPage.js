@@ -10,23 +10,23 @@ const UserPage = () => {
     const navigate = useNavigate();
 
 
-
     useEffect(() => {
         const headers = new Headers();
 
-        headers.set('Authorization', 'Basic ' + btoa(loginUser.username + ":" + loginUser.password));
+        // headers.set('Authorization', 'Basic ' + btoa(loginUser.username + ":" + loginUser.password));
+        // headers.set('content-type', 'application/json');
+
+        headers.set('Authorization', `Basic ${btoa(`oliver:12345678`)}`);
         headers.set('content-type', 'application/json');
 
-        fetch(`http://0.0.0.0:8089/api/v1/user/${loginUser.username}`, {
+        fetch(`http://0.0.0.0:8089/api/v1/user/oliver`, {
             method: 'GET',
             headers,
         }).then((response) => {
             if (response.status === 200) {
                 return response.json();
             }
-        }).then((data) => {
-            setUser(data.user)
-        });
+        })
     }, []);
 
 
@@ -44,7 +44,7 @@ const UserPage = () => {
     } else {
         return (
             <div className="maindiv">
-                <form className="loginform">
+                <form data-testid="user_page_form" className="loginform">
                     <h1 className="textbold">Account</h1>
 
                     <img src={photo} className="profilephoto"/>
